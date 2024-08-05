@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="ДоступныеКодеки" id="36">
+					<DataPath>ДоступныеКодеки</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ДоступныеКодекиКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ДоступныеКодекиРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<UsualGroup name="Группа2" id="39">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<InputField name="ПутьКЗаписи" id="31">
+							<DataPath>ПутьКЗаписи</DataPath>
+							<ContextMenu name="ПутьКЗаписиКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ПутьКЗаписиРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<Button name="НовыйПутьКЗаписи" id="41">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.НовыйПутьКЗаписи</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture._ДемоРазделСинхронизацияДанных</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="НовыйПутьКЗаписиРасширеннаяПодсказка" id="42"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="29">
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<InputField name="РазрешенияКамеры" id="43">
+							<DataPath>РазрешенияКамеры</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1280х720</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">1280*720</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>640х480</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">640*480</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РазрешенияКамерыКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="РазрешенияКамерыРасширеннаяПодсказка" id="45"/>
+							<Events>
+								<Event name="OnChange">РазрешенияКамерыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="РазмерКадра" id="21">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.РазмерКадра</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установить размер кадра</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РазмерКадраРасширеннаяПодсказка" id="22"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="стартКам" id="8">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.стартКам</CommandName>
+			<ExtendedTooltip name="стартКамРасширеннаяПодсказка" id="9"/>
+		</Button>
+		<Button name="Стоп" id="10">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Стоп</CommandName>
+			<ExtendedTooltip name="СтопРасширеннаяПодсказка" id="11"/>
+		</Button>
+		<Button name="СтартИзФайла" id="12">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СтартИзФайла</CommandName>
+			<ExtendedTooltip name="СтартИзФайлаРасширеннаяПодсказка" id="13"/>
+		</Button>
+		<Button name="НачатьЗапись" id="19">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НачатьЗапись</CommandName>
+			<ExtendedTooltip name="НачатьЗаписьРасширеннаяПодсказка" id="20"/>
+		</Button>
+		<Button name="ОстановитьЗапись" id="17">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОстановитьЗапись</CommandName>
+			<ExtendedTooltip name="ОстановитьЗаписьРасширеннаяПодсказка" id="18"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ВнешняяОбработка1</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ури" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ури</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="документHTML" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьККартинке" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к картинке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВысотаКадра" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Высота кадра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШиринаКадра" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ширина кадра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКЗаписи" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступныеКодеки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные кодеки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешенияКамеры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешения камеры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Коннект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коннект</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коннект</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Коннект</Action>
+		</Command>
+		<Command name="ОТправитьКоманду" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О тправить команду</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О тправить команду</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОТправитьКоманду</Action>
+		</Command>
+		<Command name="Команда1" id="3">
+			<Action>Команда1</Action>
+		</Command>
+		<Command name="стартКам" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт кам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт кам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>стартКам</Action>
+		</Command>
+		<Command name="Стоп" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Стоп</Action>
+		</Command>
+		<Command name="СтартИзФайла" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СтартИзФайла</Action>
+		</Command>
+		<Command name="НачатьЗапись" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать запись</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать запись</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьЗапись</Action>
+		</Command>
+		<Command name="ОстановитьЗапись" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить запись</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить запись</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОстановитьЗапись</Action>
+		</Command>
+		<Command name="РазмерКадра" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер кадра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер кадра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазмерКадра</Action>
+		</Command>
+		<Command name="НовыйПутьКЗаписи" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый путь к записи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый путь к записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НовыйПутьКЗаписи</Action>
+		</Command>
+	</Commands>
+</Form>
