@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bslReaderClass", "myRabbitClass\bslReaderClass.csproj", "{827BD836-0080-40CB-BB91-B3519DBEC21F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bslCameraClass", "myRabbitClass\bslCameraClass.csproj", "{827BD836-0080-40CB-BB91-B3519DBEC21F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

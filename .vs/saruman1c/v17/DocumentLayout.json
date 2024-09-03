@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\visualstudiopro\\Repos\\webcamWRAP1C\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{827BD836-0080-40CB-BB91-B3519DBEC21F}|myRabbitClass\\bslCameraClass.csproj|f:\\visualstudiopro\\repos\\webcamwrap1c\\myrabbitclass\\bslcamviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{827BD836-0080-40CB-BB91-B3519DBEC21F}|myRabbitClass\\bslCameraClass.csproj|solutionrelative:myrabbitclass\\bslcamviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "bslCamViewer.cs",
+              "DocumentMoniker": "F:\\visualstudiopro\\Repos\\webcamWRAP1C\\myRabbitClass\\bslCamViewer.cs",
+              "RelativeDocumentMoniker": "myRabbitClass\\bslCamViewer.cs",
+              "ToolTip": "F:\\visualstudiopro\\Repos\\webcamWRAP1C\\myRabbitClass\\bslCamViewer.cs",
+              "RelativeToolTip": "myRabbitClass\\bslCamViewer.cs",
+              "ViewState": "AQIAAOYAAAAAAAAAAAAIwPAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T11:38:58.505Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
